@@ -1,0 +1,6 @@
+{
+    "/clientApi": {
+      "target": "http://localhost:2001",
+      "secure": false
+    }
+  }

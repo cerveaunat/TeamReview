@@ -1,0 +1,14 @@
+<div class ="grid">
+    <div class="box" *ngFor="let mon of dex">
+        <img [src] = mon.sprites.front_default>
+        <h3>{{mon.name.toUpperCase()}}</h3>
+        <p>
+            <b>Type : </b> {{mon.types[0].type.name}}
+        </p>
+        <p>
+            <button (click)="post(mon)">
+                Add To Team
+            </button>
+        </p>
+    </div>
+</div>

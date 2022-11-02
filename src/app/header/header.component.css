@@ -1,0 +1,18 @@
+header {
+    padding: 2px 0px;
+    background-color: blue;
+}
+
+header div {
+    align-items: right;
+}
+
+header div h1 {
+    text-transform: uppercase;
+    color: yellow;
+}
+header div a {
+    text-align: left;
+    color: yellow;
+    text-transform: uppercase;
+}

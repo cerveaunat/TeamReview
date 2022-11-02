@@ -1,0 +1,14 @@
+<div class ="grid">
+    <div class="greatBox" *ngFor="let team of savedTeams">
+        <h4>{{team.teamName}}</h4>
+        <div class="smallBox" *ngFor="let mon of team.teamMons">
+            <img [src] = mon.sprite>
+            <h3>{{mon.name.toUpperCase()}}</h3>
+            <p>
+                <b>Type : </b> {{mon.type}}
+            </p>
+        </div>
+        <button (click)="delete(team)"> Delete team </button>
+    </div>
+</div>
+<button (click)="deleteAllTeams()">Delete all teams</button>

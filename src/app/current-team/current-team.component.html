@@ -1,0 +1,29 @@
+<div class ="grid">
+    <div class="box" *ngFor="let mon of currentTeam">
+        <img [src] = mon.sprite>
+        <h3>{{mon.name.toUpperCase()}}</h3>
+        <p>
+            <b>Type : </b> {{mon.type}}
+        </p>
+    </div>
+    <div class="buttons">
+        <button (click)="delete()"> Delete your team </button>
+        <button (click)="evaluate(currentTeam)">Evaluate your Team</button>
+    </div>
+    <div class="registerTeam">
+        <input (keyup)="onKey($event)" value="Your team name here">
+        <button (click)="save(currentTeam)">
+            Save your team
+        </button>
+    </div>
+</div>
+<div class = "buildAdvice">
+    <h3> Here are the Pokemon that are dangerous for your team. </h3>
+    <div class = "dangerousPokemon" *ngFor="let mon of dangerousPokemon">
+        <img [src] = "mon.sprites.front_default">
+        <h3>{{mon.name.toUpperCase()}}</h3>
+        <p>
+            <b>Type : </b> {{mon.types[0].type.name}}
+        </p>
+    </div>
+</div>
